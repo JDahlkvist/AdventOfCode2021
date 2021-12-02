@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1 Silver", "Day1 Silver\Day1 Silver.csproj", "{F655ECB8-950A-4FD1-9D08-75E5D37A845B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day1", "Day1", "{1C3D0DCF-0924-4778-AE13-30235DE4909D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C49BE50C-4350-42A2-8289-4E4391F1129B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextHelper", "InputReader\TextHelper.csproj", "{965EC651-0240-46A7-904D-F6D6E848E71A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1 Gold", "Day1 Gold\Day1 Gold.csproj", "{371C3669-5917-488E-A959-9D29F52D3D2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day2", "Day2", "{6F72E5DE-2262-42F8-8BDD-A1FDC4352021}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2 Silver", "Day2 Silver\Day2 Silver.csproj", "{A5F6122E-2ADB-42FF-973D-1AB4B71A33D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 2 Gold", "Day 2 Gold\Day 2 Gold.csproj", "{BF00DBB9-E86D-431A-9EED-0A0788929F06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F655ECB8-950A-4FD1-9D08-75E5D37A845B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F655ECB8-950A-4FD1-9D08-75E5D37A845B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F655ECB8-950A-4FD1-9D08-75E5D37A845B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F655ECB8-950A-4FD1-9D08-75E5D37A845B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965EC651-0240-46A7-904D-F6D6E848E71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965EC651-0240-46A7-904D-F6D6E848E71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965EC651-0240-46A7-904D-F6D6E848E71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965EC651-0240-46A7-904D-F6D6E848E71A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{371C3669-5917-488E-A959-9D29F52D3D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371C3669-5917-488E-A959-9D29F52D3D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371C3669-5917-488E-A959-9D29F52D3D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371C3669-5917-488E-A959-9D29F52D3D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5F6122E-2ADB-42FF-973D-1AB4B71A33D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F6122E-2ADB-42FF-973D-1AB4B71A33D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F6122E-2ADB-42FF-973D-1AB4B71A33D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F6122E-2ADB-42FF-973D-1AB4B71A33D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF00DBB9-E86D-431A-9EED-0A0788929F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF00DBB9-E86D-431A-9EED-0A0788929F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF00DBB9-E86D-431A-9EED-0A0788929F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF00DBB9-E86D-431A-9EED-0A0788929F06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F655ECB8-950A-4FD1-9D08-75E5D37A845B} = {1C3D0DCF-0924-4778-AE13-30235DE4909D}
+		{965EC651-0240-46A7-904D-F6D6E848E71A} = {C49BE50C-4350-42A2-8289-4E4391F1129B}
+		{371C3669-5917-488E-A959-9D29F52D3D2A} = {1C3D0DCF-0924-4778-AE13-30235DE4909D}
+		{A5F6122E-2ADB-42FF-973D-1AB4B71A33D0} = {6F72E5DE-2262-42F8-8BDD-A1FDC4352021}
+		{BF00DBB9-E86D-431A-9EED-0A0788929F06} = {6F72E5DE-2262-42F8-8BDD-A1FDC4352021}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8344EDD-F0CD-4D95-A3B9-35D6D4D4AA90}
+	EndGlobalSection
+EndGlobal
