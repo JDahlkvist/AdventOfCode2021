@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-int[,] binaryArr = null;
+﻿int[,] binaryArr = null;
 foreach (var line in TextHelper.InputReader.GetInputLines())
 {
     if (binaryArr == null) { binaryArr = new int[line.Length, 2]; }

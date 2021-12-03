@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-var input = TextHelper.InputReader.GetInputLines().ToList();
+﻿var input = TextHelper.InputReader.GetInputLines().ToList();
 
 int greaterDepthCount = 0;
 int? previousDepth = null;

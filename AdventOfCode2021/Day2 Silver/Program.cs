@@ -1,8 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
-
-int horizontal = 0;
+﻿int horizontal = 0;
 int depth = 0;
 
 foreach (string line in TextHelper.InputReader.GetInputLines())

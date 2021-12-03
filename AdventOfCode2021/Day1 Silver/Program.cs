@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-int greaterDepthCount = 0;
+﻿int greaterDepthCount = 0;
 int? previousDepth = null;
 foreach (string line in TextHelper.InputReader.GetInputLines())
 {
