@@ -1,37 +1,42 @@
 ﻿var inputLines = TextHelper.InputReader.GetInputLines();
 
 string[] drawOrder = null;
+List<int[,]> _boards = new List<int[,]>();
+
+CreateBoardsAndDrawOrder();
 
 
-List<int[,]> bricks = new List<int[,]>();
-
-int[,]? brick = null;
-int? brickLine = null;
-foreach (var line in inputLines)
+//Methods
+void CreateBoardsAndDrawOrder()
 {
-    if (line.Contains(',')) { drawOrder = line.Split(',', StringSplitOptions.RemoveEmptyEntries); }
-    else if (line.Length > 0)
+    int[,]? board = null;
+    int? boardLine = null;
+    foreach (var line in inputLines)
     {
-        if (brick == null)
+        if (line.Contains(',')) { drawOrder = line.Split(',', StringSplitOptions.RemoveEmptyEntries); }
+        else if (line.Length > 0)
         {
-            brick = new int[5, 5];
-            brickLine = 0;
+            if (board == null)
+            {
+                board = new int[5, 5];
+                boardLine = 0;
+            }
+            var brickLineValues = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 0; i < brickLineValues.Length; i++)
+            {
+                board[boardLine.Value, i] = Int32.Parse(brickLineValues[i]);
+            }
+
+            if (boardLine == 4) _boards.Add(board);
+            else boardLine++;
         }
-        var brickLineValues = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        for (int i = 0; i < brickLineValues.Length; i++)
+        else
         {
-            brick[brickLine.Value, i] = Int32.Parse(brickLineValues[i]);
+            board = null;
+            boardLine = null;
         }
-
-        if (brickLine == 4) bricks.Add(brick);
-        else brickLine++;
     }
-    else
-    {
-        brick = null;
-        brickLine = null;
-    }
-
 }
+
 
 var apa = 0;
