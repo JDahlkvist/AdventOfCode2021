@@ -1,60 +1,53 @@
-﻿int[,] binaryArr = null;
+﻿
 var inputLines = TextHelper.InputReader.GetInputLines();
 
+var binRates = inputLines.ToList();
 
-foreach (var line in inputLines)
+Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
+
+List<string> zeros = null;
+List<string> ones = null;
+
+string oxygenRate = String.Empty;
+for (int i = 0; i < inputLines.First().Length; i++)
 {
-    if (binaryArr == null) { binaryArr = new int[line.Length, 2]; }
-    for (int i = 0; i < line.Length; i++)
+    ones = new List<string>();
+    zeros = new List<string>();
+
+    foreach (var line in binRates)
     {
-        binaryArr[i, Convert.ToInt32(line[i].ToString())] += 1;
+        if (line[i] == '1') ones.Add(line);
+        else zeros.Add(line);
     }
+    if (ones.Count() == 1 && zeros.Count() == 0 || (ones.Count() == 1 && zeros.Count() == 1)) { oxygenRate = ones[0]; break; }
+    if (ones.Count() == 0 && zeros.Count == 1) { oxygenRate = zeros[0]; break; }
+
+    if (ones.Count() > zeros.Count() || ones.Count() == zeros.Count()) { binRates = new List<string>(ones); }
+    else { binRates = new List<string>(zeros); }
 }
 
-var oxygenNumbers = new List<string>(inputLines);
-for (int i = 0; i < binaryArr.Length / 2 ; i++)
+binRates = inputLines.ToList();
+string co2Rate = String.Empty;
+for (int i = 0; i < inputLines.First().Length; i++)
 {
-    if (oxygenNumbers.Count == 1) break;
+    ones = new List<string>();
+    zeros = new List<string>();
 
-    char? number = null;
-    if (binaryArr[i, 0] == binaryArr[i, 1])
+    foreach (var line in binRates)
     {
-        number = '1';
+        if (line[i] == '1') ones.Add(line);
+        else zeros.Add(line);
     }
-    else
-    {
-        number = binaryArr[i, 0] > binaryArr[i, 1] ? '0' : '1';
-    }
-    var hej = oxygenNumbers.Where(x => x.ElementAt(i) != number).ToList();
-    foreach (var oxygenNumber in hej)
-    {
-        oxygenNumbers.Remove(oxygenNumber);
-    }
+    if ((ones.Count() == 0 && zeros.Count == 1) || (ones.Count() ==1 && zeros.Count() == 1)) { co2Rate = zeros[0]; break; }
+    if (ones.Count() == 1 && zeros.Count() == 0) { co2Rate = ones[0]; break; }
+
+    if (zeros.Count() < ones.Count() || ones.Count() == zeros.Count()) { binRates = new List<string>(zeros); }
+    else { binRates = new List<string>(ones); }
 }
 
-var co2ScrubberNumbers = new List<string>(inputLines);
-for (int i = 0; i < binaryArr.Length / 2; i++)
-{
-    if (co2ScrubberNumbers.Count == 1) break;
-
-    char? number = null;
-    if (binaryArr[i, 0] == binaryArr[i, 1])
-    {
-        number = '0';
-    }
-    else
-    {
-        number = binaryArr[i, 0] < binaryArr[i, 1] ? '0' : '1';
-    }
-    var toBeAdded = co2ScrubberNumbers.Where(x => x.ElementAt(i) == number);
-    co2ScrubberNumbers = new List<string>(toBeAdded);
-}
-var oxyRating = Convert.ToInt64(oxygenNumbers.Single(), 2);
-var co2Rating = Convert.ToInt64(co2ScrubberNumbers.Single(), 2);
+var oxyRating = Convert.ToInt64(oxygenRate, 2);
+var co2Rating = Convert.ToInt64(co2Rate, 2);
 var lifeSupportRating = oxyRating * co2Rating;
 Console.WriteLine("oxy:" + oxyRating);
 Console.WriteLine("co2:" + co2Rating);
 Console.WriteLine(lifeSupportRating);
-
-
-//guess: 2002077 too high
