@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day3", "Day3", "{7982203A-A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day 3 Silver", "Day 3 Silver\Day 3 Silver.csproj", "{524FA910-C08B-4FEB-BD1F-E90071176A47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 4 Gold", "Day 4 Gold\Day 4 Gold.csproj", "{305216CA-0DF5-41AE-96B6-BED855196AE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 3 Gold", "Day 4 Gold\Day 3 Gold.csproj", "{305216CA-0DF5-41AE-96B6-BED855196AE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
